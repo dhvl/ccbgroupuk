@@ -1,7 +1,9 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useModal } from './ModalContext';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -15,6 +17,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const { openModal } = useModal();
+
   return (
     <>
       <div className={styles.emergencyBanner}>
@@ -24,7 +28,7 @@ const Header = () => {
         <div className={`${styles.container} container`}>
           <div className={styles.logo}>
             <Link href="/">
-              <span className={styles.logoText}>CCB GROUP</span>
+              <Image src="/images/logo.webp" alt="CCB Group" width={180} height={50} priority style={{ width: 'auto', height: '50px' }} />
             </Link>
           </div>
           
@@ -38,9 +42,13 @@ const Header = () => {
           </nav>
           
           <div className={styles.cta}>
-            <Link href="/contact" className={`btn ${isScrolled ? 'btn-outline' : 'btn-primary'}`} style={isScrolled ? { borderColor: 'white', color: 'white' } : {}}>
+            <button 
+              onClick={openModal} 
+              className={`btn ${isScrolled ? 'btn-outline' : 'btn-primary'}`} 
+              style={isScrolled ? { borderColor: 'white', color: 'white' } : {}}
+            >
               GET A QUOTE
-            </Link>
+            </button>
           </div>
         </div>
       </header>

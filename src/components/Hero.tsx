@@ -1,3 +1,6 @@
+"use client";
+
+import { useModal } from './ModalContext';
 import styles from './Hero.module.css';
 
 interface HeroProps {
@@ -7,6 +10,8 @@ interface HeroProps {
 }
 
 const Hero = ({ title, subtitle, backgroundImage }: HeroProps) => {
+  const { openModal } = useModal();
+
   return (
     <section 
       className={styles.hero} 
@@ -17,7 +22,7 @@ const Hero = ({ title, subtitle, backgroundImage }: HeroProps) => {
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.actions}>
-            <button className="btn btn-primary">GET A FREE QUOTE</button>
+            <button onClick={openModal} className="btn btn-primary">GET A FREE QUOTE</button>
             <a href="tel:01727614464" className="btn btn-outline" style={{ borderColor: 'white', color: 'var(--primary-navy)', background: 'white' }}>
               CALL 01727 614464
             </a>
@@ -29,3 +34,4 @@ const Hero = ({ title, subtitle, backgroundImage }: HeroProps) => {
 };
 
 export default Hero;
+

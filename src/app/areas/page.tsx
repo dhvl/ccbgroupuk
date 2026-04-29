@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { MapPin } from 'lucide-react';
 import styles from './areas.module.css';
 
@@ -21,11 +22,10 @@ export default function AreasPage() {
   return (
     <main>
       <Header />
-      <Hero 
-        title="Areas We Cover"
         subtitle="Professional property maintenance across Hertfordshire, Buckinghamshire, and London."
         backgroundImage="/images/hero-roofing.png"
       />
+      <Breadcrumbs />
       <section className="section-padding">
         <div className="container">
           <div className={styles.grid}>

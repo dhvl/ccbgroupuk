@@ -8,12 +8,16 @@ const Footer = () => {
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.info}>
-            <h2 className={styles.logo}>CCB GROUP</h2>
+            <div className={styles.footerLogoBox}>
+              <Link href="/">
+                <Image src="/images/logo.webp" alt="CCB Group" width={200} height={60} style={{ width: 'auto', height: '60px' }} />
+              </Link>
+            </div>
             <p>Specialist Property Maintenance & Facilities Management across London and the Home Counties.</p>
-            <div className={styles.accreditations}>
-              <Image src="/images/logo-trustmark.webp" alt="TrustMark" width={100} height={40} style={{ objectFit: 'contain' }} />
-              <Image src="/images/logo-chas.webp" alt="CHAS" width={100} height={40} style={{ objectFit: 'contain' }} />
-              <Image src="/images/logo-niceic.png" alt="NICEIC" width={100} height={40} style={{ objectFit: 'contain' }} />
+            <div className={styles.accreditationBox}>
+              <Image src="/images/logo-trustmark.webp" alt="TrustMark" width={80} height={35} style={{ objectFit: 'contain' }} />
+              <Image src="/images/logo-chas.webp" alt="CHAS" width={80} height={35} style={{ objectFit: 'contain' }} />
+              <Image src="/images/logo-niceic.png" alt="NICEIC" width={80} height={35} style={{ objectFit: 'contain' }} />
             </div>
           </div>
           

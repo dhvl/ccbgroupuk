@@ -20,13 +20,25 @@
   margin-bottom: 30px;
 }
 
-.accreditations {
-  display: flex;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
+.footerLogoBox {
+  background: var(--white);
+  padding: 15px 25px;
   border-radius: 8px;
   width: fit-content;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accreditationBox {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  padding: 15px 25px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-top: 30px;
 }
 
 .links h3, .contact h3 {

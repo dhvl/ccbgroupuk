@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "London's trusted property maintenance experts. Electrical, Roofing, Gutter Cleaning, and Refurbishment services across London and the Home Counties.",
 };
 
+import { ModalProvider } from "@/components/ModalContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -15,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <FloatingActions />
+        <ModalProvider>
+          {children}
+          <FloatingActions />
+        </ModalProvider>
       </body>
     </html>
   );

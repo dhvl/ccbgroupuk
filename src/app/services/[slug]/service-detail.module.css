@@ -1,0 +1,149 @@
+.compactHero {
+  background: var(--primary-navy);
+  padding: 60px 0;
+  color: var(--white);
+}
+
+.compactHero h1 {
+  color: var(--white);
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 50px;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mainImage {
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover .mainImage {
+  transform: scale(1.05);
+}
+
+.text h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.features {
+  background: var(--neutral-grey);
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.features h3 {
+  margin-bottom: 25px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featureItem .icon {
+  color: var(--accent-cyan);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebarBox {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.sidebarBox h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.sidebarBox p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.otherServicesList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.otherServicesList a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  display: block;
+}
+
+.otherServicesList a:hover {
+  color: var(--accent-cyan);
+  padding-left: 5px;
+}
+
+.viewAll {
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--primary-navy) !important;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .compactHero h1 {
+    font-size: 2rem;
+  }
+}

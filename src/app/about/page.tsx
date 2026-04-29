@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './about.module.css';
 import { CheckCircle, Shield, Award, Users } from 'lucide-react';
 
@@ -20,6 +21,7 @@ export default function AboutPage() {
         subtitle="Reliability, Quality, and Transparency in Property Maintenance."
         backgroundImage="/images/hero-roofing.png"
       />
+      <Breadcrumbs />
       
       <section className="section-padding">
         <div className="container">
@@ -73,7 +75,7 @@ export default function AboutPage() {
         <div className="container text-center">
           <h2>Fully Accredited & Insured</h2>
           <p className="mb-40">For your peace of mind, we hold the industry's most recognized accreditations.</p>
-          <div className={styles.accreditationLogos}>
+          <div className={styles.accreditationBox}>
             <img src="/images/logo-trustmark.webp" alt="TrustMark" />
             <img src="/images/logo-chas.webp" alt="CHAS" />
             <img src="/images/logo-niceic.png" alt="NICEIC" />

@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import InquiryForm from '@/components/InquiryForm';
 import styles from './contact.module.css';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
@@ -20,6 +22,7 @@ export default function ContactPage() {
         subtitle="Professional property maintenance solutions across London and the Home Counties."
         backgroundImage="/images/hero-roofing.png"
       />
+      <Breadcrumbs />
       
       <section className="section-padding">
         <div className="container">
@@ -66,51 +69,7 @@ export default function ContactPage() {
             </div>
 
             <div className={styles.formWrapper}>
-              <form className={styles.form}>
-                <div className={styles.formGrid}>
-                  <div className={styles.inputGroup}>
-                    <label>Your Name*</label>
-                    <input type="text" placeholder="John Doe" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <label>Email Address*</label>
-                    <input type="email" placeholder="john@example.com" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <label>Phone Number*</label>
-                    <input type="tel" placeholder="07123 456 789" required />
-                  </div>
-                  <div className={styles.inputGroup}>
-                    <label>Postcode*</label>
-                    <input type="text" placeholder="AL1 4TA" required />
-                  </div>
-                </div>
-                
-                <div className={styles.inputGroup}>
-                  <label>Service Required*</label>
-                  <select required>
-                    <option value="">Select a service...</option>
-                    <option value="electrical">Electrical</option>
-                    <option value="gutters">Gutter Cleaning/Repairs</option>
-                    <option value="plumbing">Plumbing</option>
-                    <option value="roofing">Roofing</option>
-                    <option value="general">General Maintenance</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div className={styles.inputGroup}>
-                  <label>Your Message*</label>
-                  <textarea placeholder="Please describe your requirements..." rows={5} required></textarea>
-                </div>
-
-                {/* Honeypot Field */}
-                <div style={{ display: 'none' }}>
-                  <input type="text" name="honeypot" tabIndex={-1} autoComplete="off" />
-                </div>
-
-                <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>SEND ENQUIRY</button>
-              </form>
+              <InquiryForm />
             </div>
           </div>
         </div>

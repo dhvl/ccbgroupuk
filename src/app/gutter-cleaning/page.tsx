@@ -1,17 +1,16 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Gutter Cleaning & Repairs London | Gutter Cleaning Co.",
-  description: "Professional gutter clearing using high-reach vacuum technology. Camera inspections and minor repairs included.",
-};
+"use client";
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { useModal } from '@/components/ModalContext';
 import styles from './gutter.module.css';
 import { Shield, Camera, Droplets, ArrowRight } from 'lucide-react';
 
 export default function GutterCleaningPage() {
+  const { openModal } = useModal();
+
   return (
     <main className={styles.gutterTheme}>
       <Header />
@@ -27,6 +26,7 @@ export default function GutterCleaningPage() {
         subtitle="Using high-reach vacuum technology and camera inspections for a perfect finish."
         backgroundImage="/images/hero-roofing.png"
       />
+      <Breadcrumbs />
       
       <section className="section-padding">
         <div className="container">
@@ -52,7 +52,7 @@ export default function GutterCleaningPage() {
             <div className={styles.ctaCard}>
               <h3>Get an Instant Quote</h3>
               <p>Text a photo of your house to 07956 552 477 for a fast estimate!</p>
-              <a href="/contact" className="btn btn-primary">ENQUIRE ONLINE <ArrowRight size={18} /></a>
+              <button onClick={openModal} className="btn btn-primary">ENQUIRE ONLINE <ArrowRight size={18} /></button>
             </div>
           </div>
         </div>
@@ -85,3 +85,4 @@ export default function GutterCleaningPage() {
     </main>
   );
 }
+
