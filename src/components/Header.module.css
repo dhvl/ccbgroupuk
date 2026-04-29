@@ -1,19 +1,22 @@
-.header {
+.headerWrapper {
   position: fixed;
-  top: 40px; /* Account for banner */
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.header {
   background: var(--white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   height: 80px;
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease-in-out, background 0.3s ease;
-}
-
-.hidden {
-  transform: translateY(-150%);
 }
 
 .emergencyBanner {
@@ -23,12 +26,10 @@
   padding: 10px 0;
   font-size: 0.85rem;
   font-weight: 700;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .emergencyBanner a {
@@ -188,44 +189,9 @@
   margin-top: 20px;
 }
 
-/* Bottom Nav Styles */
+/* Bottom Nav Styles - MOBILE ONLY */
 .bottomNav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background: var(--white);
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 1001;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-  padding: 0 10px;
-  border-top: 1px solid var(--neutral-grey);
-}
-
-.bottomNavVisible {
-  transform: translateY(0);
-}
-
-.bottomNavItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  color: var(--primary-navy);
-  background: none;
-  border: none;
-  font-size: 0.75rem;
-  font-weight: 600;
-  flex: 1;
-}
-
-.bottomIcon {
-  color: var(--accent-red);
+  display: none;
 }
 
 @media (max-width: 1024px) {
@@ -234,5 +200,44 @@
   }
   .mobileToggle {
     display: block;
+  }
+
+  .bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: var(--white);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1001;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 0 10px;
+    border-top: 1px solid var(--neutral-grey);
+  }
+
+  .bottomNavVisible {
+    transform: translateY(0);
+  }
+
+  .bottomNavItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary-navy);
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .bottomIcon {
+    color: var(--accent-red);
   }
 }
