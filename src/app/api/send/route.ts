@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const { name, email, phone, postcode, service, message } = await request.json();
 
     const data = await resend.emails.send({
-      from: 'CCB Website <onboarding@resend.dev>',
+      from: 'CCB Group <inquiry@ccbgroupuk.com>',
       to: ['inquiry@ccbgroupuk.com'],
       subject: `New Quote Request: ${service}`,
       html: `
@@ -23,8 +23,12 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error });
+    if (data.error) {
+      return NextResponse.json({ error: data.error }, { status: 400 });
+    }
+
+    return NextResponse.json({ success: true, data });
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
   }
 }

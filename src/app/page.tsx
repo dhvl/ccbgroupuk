@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
@@ -102,12 +104,108 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.gutterFeature}>
+        <div className="container">
+          <div className={styles.gutterGrid}>
+            <div className={styles.gutterInfo}>
+              <span className={styles.subBrand}>Introducing</span>
+              <h2 className={styles.gutterTitle}>Gutter Cleaning Co.</h2>
+              <p className={styles.gutterSubTitle}>Part of CCB Group (UK) Limited</p>
+              <p className={styles.gutterDesc}>
+                We clean all types and all heights of gutters using our <strong>Gutter Vacs Hoover System</strong> — with before and after camera footage on every clean.
+              </p>
+              <div className={styles.gutterActions}>
+                <Link href="/gutter-cleaning" className="btn btn-primary">GUTTER CLEANING SERVICES →</Link>
+                <p className={styles.discountText}>Discount on Multiple Blocks / Houses</p>
+              </div>
+            </div>
+            <div className={styles.gutterImage}>
+              <Image src="/images/media__1777465759335.png" alt="Gutter Cleaning" width={600} height={400} className={styles.roundedImg} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.pricingStrip}>
+        <div className="container">
+          <div className={styles.pricingFlex}>
+            <span>Call-outs from <strong>£60.00 + VAT</strong> — Subject to area and trade</span>
+            <button onClick={() => window.dispatchEvent(new CustomEvent('openModal'))} className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
+              REQUEST A CALL-OUT
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2>Areas We Cover</h2>
+            <p>Reliable maintenance services across London and the surrounding Home Counties.</p>
+          </div>
+          <div className={styles.areasGrid}>
+            <div className={styles.areaCard}>
+              <h3>North London</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>East London</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>Hertfordshire</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>Bedfordshire</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>Essex</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>South London</h3>
+              <p>⚡ Limited Coverage</p>
+            </div>
+          </div>
+          <div className={styles.mapLinkBox}>
+            <Link href="/areas" className={styles.mapLink}>View Full Coverage Map →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${styles.testimonials} section-padding`}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2>What Our Clients Say</h2>
+          </div>
+          <div className={styles.testimonialGrid}>
+            <div className={styles.testimonialCard}>
+              <div className={styles.stars}>★★★★★</div>
+              <p>"Excellent service. The gutter cleaning was thorough, and the before/after photos gave me real peace of mind."</p>
+              <span className={styles.author}>— David R., St Albans</span>
+            </div>
+            <div className={styles.testimonialCard}>
+              <div className={styles.stars}>★★★★★</div>
+              <p>"Very professional team. They handled our commercial electrical testing across 5 sites with zero fuss."</p>
+              <span className={styles.author}>— Sarah L., London</span>
+            </div>
+            <div className={styles.testimonialCard}>
+              <div className={styles.stars}>★★★★★</div>
+              <p>"Fast response to our emergency roofing leak. Competitive pricing and high-quality repair."</p>
+              <span className={styles.author}>— James M., Watford</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.ctaBanner}>
         <div className="container">
           <div className={styles.ctaFlex}>
-            <h2>Ready to start your project?</h2>
-            <button className="btn btn-primary" style={{ background: 'var(--accent-red)' }}>
-              GET AN INSTANT QUOTE
+            <h2>Ready to book? Get in touch today.</h2>
+            <button onClick={() => window.dispatchEvent(new CustomEvent('openModal'))} className="btn btn-primary" style={{ background: 'var(--accent-red)' }}>
+              SEND US A MESSAGE →
             </button>
           </div>
         </div>

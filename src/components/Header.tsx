@@ -48,9 +48,10 @@ const Header = () => {
               </div>
             </div>
             <Link href="/gutter-cleaning">Gutter Cleaning</Link>
-            <Link href="/areas">Areas</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/areas">Areas We Cover</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/gallery">Gallery</Link>
+            <Link href="/contact">Contact Us</Link>
           </nav>
           
           <div className={styles.cta}>
