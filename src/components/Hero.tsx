@@ -23,7 +23,7 @@ const Hero = ({ title, subtitle, backgroundImage }: HeroProps) => {
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.actions}>
             <button onClick={openModal} className="btn btn-primary">GET A FREE QUOTE</button>
-            <a href="tel:01727614464" className="btn btn-outline" style={{ borderColor: 'white', color: 'var(--primary-navy)', background: 'white' }}>
+            <a href="tel:01727614464" className="btn" style={{ backgroundColor: 'white', color: 'var(--primary-navy)', border: '2px solid white' }}>
               CALL 01727 614464
             </a>
           </div>

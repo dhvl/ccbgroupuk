@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useModal } from './ModalContext';
+import { services } from '@/data/services';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -34,7 +35,18 @@ const Header = () => {
           
           <nav className={styles.nav}>
             <Link href="/">Home</Link>
-            <Link href="/services">Services</Link>
+            <div className={styles.navItemWithDropdown}>
+              <Link href="/services">Services <span className={styles.arrow}>▾</span></Link>
+              <div className={styles.dropdown}>
+                <div className={styles.dropdownGrid}>
+                  {services.map((service) => (
+                    <Link key={service.slug} href={`/services/${service.slug}`} className={styles.dropdownItem}>
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link href="/gutter-cleaning">Gutter Cleaning</Link>
             <Link href="/areas">Areas</Link>
             <Link href="/about">About</Link>

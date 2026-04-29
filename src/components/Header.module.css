@@ -66,6 +66,77 @@
   color: var(--accent-red);
 }
 
+.navItemWithDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 0.8rem;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navItemWithDropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.navItemWithDropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdownGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dropdownItem {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-dark) !important;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background: var(--neutral-grey);
+  color: var(--accent-red) !important;
+}
+
+.scrolled .dropdown {
+  background: var(--primary-navy);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scrolled .dropdownItem {
+  color: var(--white) !important;
+}
+
+.scrolled .dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 @media (max-width: 1024px) {
   .nav {
     display: none;

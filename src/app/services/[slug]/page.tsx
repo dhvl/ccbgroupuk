@@ -9,6 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './service-detail.module.css';
 import { CheckCircle } from 'lucide-react';
+import ServiceSidebar from './ServiceSidebar';
 
 interface Props {
   params: { slug: string };
@@ -77,27 +78,7 @@ export default function ServicePage({ params }: Props) {
               </div>
             </div>
 
-            <aside className={styles.sidebar}>
-              <div className={styles.sidebarBox}>
-                <h3>Request a Quote</h3>
-                <p>Fill out the form below for a free, no-obligation estimate.</p>
-                <InquiryForm compact />
-              </div>
-
-              <div className={styles.sidebarBox}>
-                <h3>Other Services</h3>
-                <ul className={styles.otherServicesList}>
-                  {otherServices.map(s => (
-                    <li key={s.slug}>
-                      <Link href={`/services/${s.slug}`}>{s.title}</Link>
-                    </li>
-                  ))}
-                  <li>
-                    <Link href="/services" className={styles.viewAll}>View All Services →</Link>
-                  </li>
-                </ul>
-              </div>
-            </aside>
+            <ServiceSidebar otherServices={otherServices} />
           </div>
         </div>
       </section>
