@@ -1,19 +1,18 @@
-import { Metadata } from 'next';
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
 import Footer from '@/components/Footer';
+import { useModal } from '@/components/ModalContext';
 import styles from './page.module.css';
-import { Shield, Zap, Home as House, Droplets, MapPin, Phone } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: "CCB Group UK Ltd | Property Maintenance & Gutter Cleaning London",
-  description: "London's trusted property maintenance experts. Electrical, Roofing, Gutter Cleaning, and Refurbishment services across London and the Home Counties.",
-};
+import { Shield, Zap, House, Droplets, MapPin, Phone } from 'lucide-react';
 
 export default function Home() {
+  const { openModal } = useModal();
+  
   const services = [
     {
       title: 'Gutter Cleaning',
@@ -60,7 +59,7 @@ export default function Home() {
                 <div className={styles.iconWrapper}>{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
-                <a href={service.link} className={styles.serviceLink}>Learn More →</a>
+                <Link href={service.link} className={styles.serviceLink}>Learn More →</Link>
               </div>
             ))}
           </div>
@@ -130,7 +129,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.pricingFlex}>
             <span>Call-outs from <strong>£60.00 + VAT</strong> — Subject to area and trade</span>
-            <button onClick={() => window.dispatchEvent(new CustomEvent('openModal'))} className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
+            <button onClick={openModal} className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
               REQUEST A CALL-OUT
             </button>
           </div>
@@ -204,7 +203,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.ctaFlex}>
             <h2>Ready to book? Get in touch today.</h2>
-            <button onClick={() => window.dispatchEvent(new CustomEvent('openModal'))} className="btn btn-primary" style={{ background: 'var(--accent-red)' }}>
+            <button onClick={openModal} className="btn btn-primary" style={{ background: 'var(--accent-red)' }}>
               SEND US A MESSAGE →
             </button>
           </div>
