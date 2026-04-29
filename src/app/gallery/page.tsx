@@ -14,7 +14,6 @@ export default function GalleryPage() {
 
   const projects = [
     { id: 1, title: 'EICR Inspection', category: 'Electrical', image: '/images/services/electrical-testing.png' },
-    { id: 2, title: 'High-Reach Gutter Clearing', category: 'Gutters', image: '/images/media__1777465759335.png' },
     { id: 3, title: 'Roof Repair St Albans', category: 'Roofing', image: '/images/services/roofing.png' },
     { id: 4, title: 'Kitchen Refurbishment', category: 'Refurbishment', image: '/images/services/refurbishment.png' },
     { id: 5, title: 'External Decorating', category: 'Maintenance', image: '/images/services/decorating.png' },
@@ -28,7 +27,7 @@ export default function GalleryPage() {
   return (
     <main>
       <Header />
-      <div className="page-header">
+      <div className={styles.compactHero}>
         <div className="container">
           <h1>Our Work</h1>
         </div>
