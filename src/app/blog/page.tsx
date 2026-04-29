@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import CompactHero from '@/components/CompactHero';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Image from 'next/image';
@@ -11,7 +12,7 @@ export default function BlogPage() {
       title: "How often should you clean your gutters?",
       excerpt: "Blocked gutters can cause serious damp and structural damage. Learn how to identify when yours need attention.",
       date: "April 15, 2026",
-      image: "/images/media__1777465759335.png"
+      image: "/images/services/general-maintenance.png"
     },
     {
       id: 2,
@@ -32,11 +33,7 @@ export default function BlogPage() {
   return (
     <main>
       <Header />
-      <div className="page-header">
-        <div className="container">
-          <h1>News & Insights</h1>
-        </div>
-      </div>
+      <CompactHero title="News & Insights" />
       <Breadcrumbs />
 
       <section className="section-padding">

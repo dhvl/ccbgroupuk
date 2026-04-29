@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import CompactHero from '@/components/CompactHero';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -6,11 +7,7 @@ export default function TermsPage() {
   return (
     <main>
       <Header />
-      <div className="page-header">
-        <div className="container">
-          <h1>Terms & Conditions</h1>
-        </div>
-      </div>
+      <CompactHero title="Terms & Conditions" />
       <Breadcrumbs />
 
       <section className="section-padding">

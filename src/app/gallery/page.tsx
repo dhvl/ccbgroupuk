@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Header from '@/components/Header';
+import CompactHero from '@/components/CompactHero';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Image from 'next/image';
@@ -27,11 +28,7 @@ export default function GalleryPage() {
   return (
     <main>
       <Header />
-      <div className={styles.compactHero}>
-        <div className="container">
-          <h1>Our Work</h1>
-        </div>
-      </div>
+      <CompactHero title="Our Work" />
       <Breadcrumbs />
 
       <section className="section-padding">
