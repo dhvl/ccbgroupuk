@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import CompactHero from '@/components/CompactHero';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import styles from './faqs.module.css';
@@ -7,7 +8,7 @@ export default function FAQsPage() {
   const faqs = [
     {
       q: "What areas do you cover?",
-      a: "We cover North London, East London, South London (limited), Hertfordshire, Bedfordshire, and Essex. Call-outs start from £60 + VAT depending on area and trade."
+      a: "We cover North London, East London, South London (limited), Hertfordshire, Bedfordshire, and Essex. Our coverage continues to expand — please contact us for specific availability in your area."
     },
     {
       q: "Are you accredited?",
@@ -34,19 +35,15 @@ export default function FAQsPage() {
       a: "Yes. Our VAT Registration Number is 284 6962 52."
     },
     {
-      q: "What is your minimum call-out charge?",
-      a: "Call-outs start from £60.00 + VAT, subject to area and trade."
+      q: "How much do your services cost?",
+      a: "Our pricing varies depending on the location, size of the property, and the specific trade required. Please contact us for a free, no-obligation instant quote tailored to your needs."
     }
   ];
 
   return (
     <main>
       <Header />
-      <div className="page-header">
-        <div className="container">
-          <h1>Frequently Asked Questions</h1>
-        </div>
-      </div>
+      <CompactHero title="Frequently Asked Questions" />
       <Breadcrumbs />
 
       <section className="section-padding">
@@ -63,9 +60,13 @@ export default function FAQsPage() {
           </div>
           
           <div className={styles.ctaBox}>
-            <h3>Still have questions?</h3>
-            <p>Our team is here to help. Give us a call or send a message.</p>
-            <a href="/contact" className="btn btn-primary">CONTACT US</a>
+            <div className={styles.ctaInner}>
+              <h3>Still have questions?</h3>
+              <p>Our team is here to help. Give us a call or send a message for an instant quote.</p>
+              <a href="/contact" className="btn btn-primary" style={{ background: 'var(--white)', color: 'var(--primary-navy)', padding: '15px 40px' }}>
+                CONTACT US TODAY
+              </a>
+            </div>
           </div>
         </div>
       </section>
