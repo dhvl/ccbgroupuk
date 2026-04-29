@@ -113,25 +113,13 @@ export default function Home() {
               <p className={styles.gutterDesc}>
                 We clean all types and all heights of gutters using our <strong>Gutter Vacs Hoover System</strong> — with before and after camera footage on every clean.
               </p>
-              <div className={styles.gutterActions}>
-                <Link href="/gutter-cleaning" className="btn btn-primary">GUTTER CLEANING SERVICES →</Link>
-                <p className={styles.discountText}>Discount on Multiple Blocks / Houses</p>
-              </div>
             </div>
-            <div className={styles.gutterImage}>
-              <Image src="/images/services/general-maintenance.png" alt="Gutter Cleaning" width={600} height={400} className={styles.roundedImg} />
+            <div className={styles.gutterActions}>
+              <Link href="/gutter-cleaning" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem', width: '100%' }}>
+                GUTTER CLEANING SERVICES →
+              </Link>
+              <p className={styles.discountText}>Discount on Multiple Blocks / Houses</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.pricingStrip}>
-        <div className="container">
-          <div className={styles.pricingFlex}>
-            <span>Call-outs from <strong>£60.00 + VAT</strong> — Subject to area and trade</span>
-            <button onClick={openModal} className="btn" style={{ background: 'white', color: 'var(--primary-navy)' }}>
-              REQUEST A CALL-OUT
-            </button>
           </div>
         </div>
       </section>
@@ -199,17 +187,6 @@ export default function Home() {
               <p>"Fast response to our emergency roofing leak. Competitive pricing and high-quality repair."</p>
               <span className={styles.author}>— James M., Watford</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.ctaBanner}>
-        <div className="container">
-          <div className={styles.ctaFlex}>
-            <h2>Ready to book? Get in touch today.</h2>
-            <button onClick={openModal} className="btn btn-primary" style={{ background: 'var(--accent-red)' }}>
-              SEND US A MESSAGE →
-            </button>
           </div>
         </div>
       </section>
