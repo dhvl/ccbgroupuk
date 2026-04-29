@@ -7,6 +7,33 @@
   height: 80px;
   display: flex;
   align-items: center;
+  transition: var(--transition);
+}
+
+.scrolled {
+  background: var(--primary-navy);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scrolled .logoText,
+.scrolled .nav a {
+  color: var(--white);
+}
+
+.emergencyBanner {
+  background: var(--accent-red);
+  color: var(--white);
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1001;
+}
+
+.emergencyBanner a {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .container {

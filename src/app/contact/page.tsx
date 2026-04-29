@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function ContactPage() {
   return (
@@ -18,6 +19,7 @@ export default function ContactPage() {
           <p>Phone: 01727 614464</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

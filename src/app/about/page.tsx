@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
           <p>CCB Group is a family-run business dedicated to providing high-quality facility management and property maintenance services.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

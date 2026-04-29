@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function RoofingPage() {
   return (
@@ -16,6 +17,7 @@ export default function RoofingPage() {
           <p>We provide comprehensive roofing repairs and maintenance to keep your property watertight and secure.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

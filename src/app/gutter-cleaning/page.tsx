@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function GutterCleaningPage() {
   return (
@@ -16,6 +17,7 @@ export default function GutterCleaningPage() {
           <p>Blocked gutters can cause serious damp and structural issues. Our expert team ensures your drainage system is clear and functional.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

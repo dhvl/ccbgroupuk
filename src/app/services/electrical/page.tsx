@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function ElectricalPage() {
   return (
@@ -16,6 +17,7 @@ export default function ElectricalPage() {
           <p>Our qualified electricians handle everything from domestic rewiring to large-scale commercial installations.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function AreasPage() {
   return (
@@ -16,6 +17,7 @@ export default function AreasPage() {
           <p>We have local teams based strategically to cover the entire M25 region and surrounding counties.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
+import Footer from '@/components/Footer';
 import styles from './page.module.css';
 import { Shield, Zap, Home as House, Droplets, MapPin, Phone } from 'lucide-react';
 
@@ -106,34 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <div className="container">
-          <div className={styles.footerGrid}>
-            <div>
-              <h3 style={{ color: 'white' }}>CCB Group UK Ltd</h3>
-              <p>Specialist Property Maintenance & Facilities Management.</p>
-            </div>
-            <div>
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="/gutter-cleaning">Gutter Cleaning</a></li>
-                <li><a href="/services/electrical">Electrical</a></li>
-                <li><a href="/services/roofing">Roofing</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Contact</h4>
-              <p>Unit 5, Executive Park, Hatfield Rd, St Albans AL1 4TA</p>
-              <p>Email: info@ccbgroup.co.uk</p>
-              <p>Phone: 01727 614464</p>
-            </div>
-          </div>
-          <div className={styles.copyright}>
-            <p>&copy; {new Date().getFullYear()} CCB Group UK Ltd. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

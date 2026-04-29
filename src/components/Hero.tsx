@@ -18,9 +18,9 @@ const Hero = ({ title, subtitle, backgroundImage }: HeroProps) => {
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.actions}>
             <button className="btn btn-primary">GET A FREE QUOTE</button>
-            <button className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
+            <a href="tel:01727614464" className="btn btn-outline" style={{ borderColor: 'white', color: 'var(--primary-navy)', background: 'white' }}>
               CALL 01727 614464
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -7,13 +7,13 @@ const TrustBar = () => {
       <div className="container">
         <div className={styles.flex}>
           <div className={styles.logoItem}>
-            <Image src="/images/logo-trustmark.webp" alt="TrustMark" width={150} height={60} objectFit="contain" />
+            <Image src="/images/logo-trustmark.webp" alt="TrustMark" width={180} height={60} style={{ width: 'auto', height: '60px' }} />
           </div>
           <div className={styles.logoItem}>
-            <Image src="/images/logo-chas.webp" alt="CHAS Accredited" width={150} height={60} objectFit="contain" />
+            <Image src="/images/logo-chas.webp" alt="CHAS Accredited" width={150} height={60} style={{ width: 'auto', height: '60px' }} />
           </div>
           <div className={styles.logoItem}>
-            <Image src="/images/logo-niceic.png" alt="NICEIC Approved" width={150} height={60} objectFit="contain" />
+            <Image src="/images/logo-niceic.png" alt="NICEIC Approved" width={150} height={60} style={{ width: 'auto', height: '60px' }} />
           </div>
           <div className={styles.infoItem}>
             <p><strong>VAT Reg:</strong> 284 6962 52</p>

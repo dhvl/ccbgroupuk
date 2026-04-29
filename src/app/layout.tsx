@@ -15,6 +15,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <a 
+          href="https://wa.me/447956552477" 
+          className="whatsapp-float" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          title="Chat with us on WhatsApp"
+        >
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
       </body>
     </html>
   );

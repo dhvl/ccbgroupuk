@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -16,6 +17,7 @@ export default function ServicesPage() {
           <p>We provide a wide range of services for residential and commercial properties.</p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
