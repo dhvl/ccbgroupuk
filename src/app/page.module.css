@@ -148,34 +148,37 @@
 
 /* New Sections */
 .gutterFeature {
-  position: relative;
-  background: url('/images/hero-roofing.png') center/cover no-repeat;
-  padding: 100px 0;
-  color: var(--white);
-  overflow: hidden;
+  padding: 80px 0;
 }
 
-.gutterFeature::before {
+.gutterCard {
+  position: relative;
+  background: url('/images/hero-roofing.png') center/cover no-repeat;
+  padding: 80px 60px;
+  color: var(--white);
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.gutterCard::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(30, 42, 110, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(30, 42, 110, 0.75);
+  backdrop-filter: blur(12px);
   z-index: 1;
 }
 
-.gutterFeature .container {
+.gutterCardInner {
   position: relative;
   z-index: 2;
-}
-
-.gutterGrid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
 }
 
@@ -186,17 +189,19 @@
   letter-spacing: 2px;
   display: block;
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .gutterTitle {
   font-size: 3.5rem;
   color: var(--white);
   margin-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .gutterSubTitle {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 30px;
 }
 
@@ -204,6 +209,7 @@
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .gutterActions {

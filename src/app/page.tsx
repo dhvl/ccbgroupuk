@@ -105,20 +105,22 @@ export default function Home() {
 
       <section className={styles.gutterFeature}>
         <div className="container">
-          <div className={styles.gutterGrid}>
-            <div className={styles.gutterInfo}>
-              <span className={styles.subBrand}>Introducing</span>
-              <h2 className={styles.gutterTitle}>Gutter Cleaning Co.</h2>
-              <p className={styles.gutterSubTitle}>Part of CCB Group (UK) Limited</p>
-              <p className={styles.gutterDesc}>
-                We clean all types and all heights of gutters using our <strong>Gutter Vacs Hoover System</strong> — with before and after camera footage on every clean.
-              </p>
-            </div>
-            <div className={styles.gutterActions}>
-              <Link href="/gutter-cleaning" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem', width: '100%' }}>
-                GUTTER CLEANING SERVICES →
-              </Link>
-              <p className={styles.discountText}>Discount on Multiple Blocks / Houses</p>
+          <div className={styles.gutterCard}>
+            <div className={styles.gutterCardInner}>
+              <div className={styles.gutterInfo}>
+                <span className={styles.subBrand}>Introducing</span>
+                <h2 className={styles.gutterTitle}>Gutter Cleaning Co.</h2>
+                <p className={styles.gutterSubTitle}>Part of CCB Group (UK) Limited</p>
+                <p className={styles.gutterDesc}>
+                  We clean all types and all heights of gutters using our <strong>Gutter Vacs Hoover System</strong> — with before and after camera footage on every clean.
+                </p>
+              </div>
+              <div className={styles.gutterActions}>
+                <Link href="/gutter-cleaning" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem', width: '100%', background: 'var(--white)', color: 'var(--primary-navy)' }}>
+                  GUTTER CLEANING SERVICES →
+                </Link>
+                <p className={styles.discountText}>Discount on Multiple Blocks / Houses</p>
+              </div>
             </div>
           </div>
         </div>
