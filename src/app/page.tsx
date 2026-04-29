@@ -8,7 +8,7 @@ import TrustBar from '@/components/TrustBar';
 import Footer from '@/components/Footer';
 import { useModal } from '@/components/ModalContext';
 import styles from './page.module.css';
-import { Shield, Zap, Home, Droplets, MapPin, Phone } from 'lucide-react';
+import { Shield, Zap, Home as HomeIcon, Droplets, MapPin, Phone } from 'lucide-react';
 
 export default function Home() {
   const { openModal } = useModal();
@@ -29,7 +29,7 @@ export default function Home() {
     {
       title: 'Roofing Repairs',
       desc: 'Expert roofing services from minor leak repairs to full roof replacements and surveys.',
-      icon: <Home size={40} />,
+      icon: <HomeIcon size={40} />,
       link: '/services/roofing'
     }
   ];
