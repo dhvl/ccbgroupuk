@@ -129,7 +129,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.pricingFlex}>
             <span>Call-outs from <strong>£60.00 + VAT</strong> — Subject to area and trade</span>
-            <button onClick={openModal} className="btn btn-outline" style={{ borderColor: 'white', color: 'white' }}>
+            <button onClick={openModal} className="btn" style={{ background: 'white', color: 'var(--primary-navy)' }}>
               REQUEST A CALL-OUT
             </button>
           </div>
