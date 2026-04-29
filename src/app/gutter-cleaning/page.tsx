@@ -1,22 +1,86 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Gutter Cleaning & Repairs London | Gutter Cleaning Co.",
+  description: "Professional gutter clearing using high-reach vacuum technology. Camera inspections and minor repairs included.",
+};
+
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
+import styles from './gutter.module.css';
+import { Shield, Camera, Droplets, ArrowRight } from 'lucide-react';
 
 export default function GutterCleaningPage() {
   return (
-    <main>
+    <main className={styles.gutterTheme}>
       <Header />
+      <div className={styles.gutterBranding}>
+        <div className="container">
+          <span className={styles.subBrand}>A DIVISION OF CCB GROUP</span>
+          <h1 className={styles.mainBrand}>GUTTER CLEANING CO.</h1>
+        </div>
+      </div>
+      
       <Hero 
-        title="Gutter Cleaning & Repairs"
-        subtitle="Professional gutter clearing using high-reach vacuum technology for homes and businesses."
+        title="Professional Gutter Clearing & Repairs"
+        subtitle="Using high-reach vacuum technology and camera inspections for a perfect finish."
         backgroundImage="/images/hero-roofing.png"
       />
+      
       <section className="section-padding">
         <div className="container">
-          <h2>Keep Your Property Safe</h2>
-          <p>Blocked gutters can cause serious damp and structural issues. Our expert team ensures your drainage system is clear and functional.</p>
+          <div className={styles.introGrid}>
+            <div>
+              <h2>The Experts in Gutter Maintenance</h2>
+              <p>Blocked gutters can cause serious damp, structural damage, and costly repairs. At Gutter Cleaning Co (a division of CCB Group), we provide professional, safe, and efficient gutter clearing services for residential and commercial properties.</p>
+              <div className={styles.featureList}>
+                <div className={styles.feature}>
+                  <Shield size={24} />
+                  <span>Fully Insured & Accredited</span>
+                </div>
+                <div className={styles.feature}>
+                  <Camera size={24} />
+                  <span>Before & After Photos Provided</span>
+                </div>
+                <div className={styles.feature}>
+                  <Droplets size={24} />
+                  <span>Minor Repairs Included as Standard</span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.ctaCard}>
+              <h3>Get an Instant Quote</h3>
+              <p>Text a photo of your house to 07956 552 477 for a fast estimate!</p>
+              <a href="/contact" className="btn btn-primary">ENQUIRE ONLINE <ArrowRight size={18} /></a>
+            </div>
+          </div>
         </div>
       </section>
+
+      <section className={`${styles.process} section-padding`}>
+        <div className="container">
+          <h2 className="text-center">Our Process</h2>
+          <div className={styles.processGrid}>
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>01</div>
+              <h3>Camera Inspection</h3>
+              <p>We use high-reach cameras to inspect your gutters from the ground, identifying blocks and defects.</p>
+            </div>
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>02</div>
+              <h3>Gutter Vac Clearing</h3>
+              <p>Our powerful vacuum systems remove all debris, silt, and moss without the need for ladders or scaffolding.</p>
+            </div>
+            <div className={styles.step}>
+              <div className={styles.stepNumber}>03</div>
+              <h3>Testing & Verification</h3>
+              <p>We flush the system with water to ensure downpipes are clear and provide you with a full report.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

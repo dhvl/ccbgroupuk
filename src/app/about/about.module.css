@@ -1,0 +1,87 @@
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.imagePlaceholder {
+  height: 400px;
+  background: var(--neutral-grey);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(30, 42, 110, 0.1), rgba(30, 42, 110, 0.1)), url('/images/ccb-van-team.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.brandingBox {
+  background: var(--primary-navy);
+  color: var(--white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.brandingBox h3 {
+  color: var(--white);
+  margin-top: 15px;
+}
+
+.values {
+  background: var(--neutral-grey);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.valueItem {
+  text-align: center;
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.valueItem:hover {
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  color: var(--accent-red);
+  margin-bottom: 20px;
+  width: 48px;
+  height: 48px;
+}
+
+.accreditationLogos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.accreditationLogos img {
+  height: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

@@ -24,6 +24,24 @@ export default function RootLayout({
         >
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
         </a>
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="back-to-top"
+          id="backToTop"
+          title="Back to Top"
+        >
+          ↑
+        </button>
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.onscroll = function() {
+            var btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              btn.style.display = "flex";
+            } else {
+              btn.style.display = "none";
+            }
+          };
+        ` }} />
       </body>
     </html>
   );

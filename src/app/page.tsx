@@ -1,9 +1,15 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustBar from '@/components/TrustBar';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 import { Shield, Zap, Home as House, Droplets, MapPin, Phone } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "CCB Group UK Ltd | Property Maintenance & Gutter Cleaning London",
+  description: "London's trusted property maintenance experts. Electrical, Roofing, Gutter Cleaning, and Refurbishment services across London and the Home Counties.",
+};
 
 export default function Home() {
   const services = [
