@@ -30,7 +30,7 @@ export const services: Service[] = [
     shortDesc: 'Full electrical maintenance, fault finding, and installation works.',
     fullDesc: 'Our NICEIC approved electricians handle all aspects of electrical maintenance and installation, ensuring your systems are reliable and safe.',
     features: ['Fault Finding', 'Rewiring Works', 'Lighting Upgrades', 'Fuse Board Changes', 'Socket Installations', 'Emergency Repairs'],
-    image: '/images/services/electrical-testing.png'
+    image: '/images/services/electrical-maintenance.png'
   },
   {
     slug: 'carpentry',
@@ -86,7 +86,7 @@ export const services: Service[] = [
     shortDesc: 'Driveway, patio, building facade, and fleet power washing.',
     fullDesc: 'Restore the appearance of your external surfaces with our high-pressure cleaning services for all property types.',
     features: ['Driveway Cleaning', 'Patio Restoration', 'Brickwork Cleaning', 'Graffiti Removal', 'Fleet Washing', 'Commercial Facades'],
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=1200'
+    image: '/images/services/power-washing.png'
   },
   {
     slug: 'brick-work',
@@ -94,7 +94,7 @@ export const services: Service[] = [
     shortDesc: 'Repointing, new build brickwork, and repairs.',
     fullDesc: 'Expert masonry services covering structural repairs, cosmetic repointing, and new brickwork installations.',
     features: ['Repointing', 'Brick Repairs', 'Structural Walls', 'Garden Walls', 'Chimney Repairs', 'Lintel Fitting'],
-    image: 'https://images.unsplash.com/photo-1582266255765-fa5cf1a1d501?auto=format&fit=crop&q=80&w=1200'
+    image: '/images/services/brickwork.png'
   },
   {
     slug: 'plumbing',
@@ -102,7 +102,7 @@ export const services: Service[] = [
     shortDesc: 'General plumbing maintenance, leak repairs, and installations.',
     fullDesc: 'Reliable plumbing services for all your domestic and commercial needs, from simple leaks to full system installs.',
     features: ['Leak Detection', 'Pipe Repairs', 'Toilet Repairs', 'Radiator Fitting', 'Tap Replacement', 'Bathroom Plumbing'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200'
+    image: '/images/services/plumbing.png'
   },
   {
     slug: 'fencing',
@@ -110,6 +110,6 @@ export const services: Service[] = [
     shortDesc: 'Timber, metal, and composite fencing supply and installation.',
     fullDesc: 'Secure and enhance your boundary with our professional fencing installation and repair services.',
     features: ['Panel Fencing', 'Closeboard Fencing', 'Gate Installations', 'Security Fencing', 'Fence Repairs', 'Trellis Work'],
-    image: 'https://images.unsplash.com/photo-1558905758-294371987621?auto=format&fit=crop&q=80&w=1200'
+    image: '/images/services/fencing.png'
   }
 ];
