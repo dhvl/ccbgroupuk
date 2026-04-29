@@ -33,7 +33,7 @@ export default function Home() {
       <Hero 
         title="London's Premier Property Maintenance Specialists"
         subtitle="Professional gutter cleaning, electrical, and roofing services for domestic and commercial clients since 2010."
-        backgroundImage="/images/hero-roofing.webp"
+        backgroundImage="/images/hero-roofing.png"
       />
 
       <TrustBar />

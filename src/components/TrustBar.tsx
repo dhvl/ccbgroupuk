@@ -13,7 +13,7 @@ const TrustBar = () => {
             <Image src="/images/logo-chas.webp" alt="CHAS Accredited" width={150} height={60} objectFit="contain" />
           </div>
           <div className={styles.logoItem}>
-            <Image src="/images/logo-niceic.webp" alt="NICEIC Approved" width={150} height={60} objectFit="contain" />
+            <Image src="/images/logo-niceic.png" alt="NICEIC Approved" width={150} height={60} objectFit="contain" />
           </div>
           <div className={styles.infoItem}>
             <p><strong>VAT Reg:</strong> 284 6962 52</p>
