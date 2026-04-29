@@ -148,13 +148,19 @@
 
 /* New Sections */
 .gutterFeature {
-  padding: 80px 0;
+  padding: 80px 0 0;
+}
+
+.gutterContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .gutterCard {
   position: relative;
   background: url('/images/hero-roofing.png') center/cover no-repeat;
-  padding: 80px 60px;
+  padding: 60px;
   color: var(--white);
   overflow: hidden;
   border-radius: 24px;

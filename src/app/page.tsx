@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       <section className={styles.gutterFeature}>
-        <div className="container">
+        <div className={styles.gutterContainer}>
           <div className={styles.gutterCard}>
             <div className={styles.gutterCardInner}>
               <div className={styles.gutterInfo}>
