@@ -119,7 +119,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.gutterImage}>
-              <Image src="/images/media__1777465759335.png" alt="Gutter Cleaning" width={600} height={400} className={styles.roundedImg} />
+              <Image src="/images/services/general-maintenance.png" alt="Gutter Cleaning" width={600} height={400} className={styles.roundedImg} />
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       <section className="section-padding">
-        <div className="container">
+        <div className={styles.wideContainer}>
           <div className={styles.sectionHeader}>
             <h2>Areas We Cover</h2>
             <p>Reliable maintenance services across London and the surrounding Home Counties.</p>
@@ -149,6 +149,10 @@ export default function Home() {
             </div>
             <div className={styles.areaCard}>
               <h3>East London</h3>
+              <p>✔ Full Coverage</p>
+            </div>
+            <div className={styles.areaCard}>
+              <h3>West London</h3>
               <p>✔ Full Coverage</p>
             </div>
             <div className={styles.areaCard}>
