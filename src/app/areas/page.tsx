@@ -22,6 +22,8 @@ export default function AreasPage() {
   return (
     <main>
       <Header />
+      <Hero 
+        title="Areas We Cover"
         subtitle="Professional property maintenance across Hertfordshire, Buckinghamshire, and London."
         backgroundImage="/images/hero-roofing.png"
       />
