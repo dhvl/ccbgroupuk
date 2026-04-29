@@ -88,8 +88,7 @@ export default function Home() {
               </ul>
             </div>
             <div className={styles.imageBox}>
-              <div className={styles.placeholderImg}>
-                {/* Image of a CCB Group van or team member would go here */}
+              <div className={styles.placeholderImg} style={{ background: 'url(/images/ccb-van.png) center/cover no-repeat' }}>
               </div>
             </div>
           </div>
