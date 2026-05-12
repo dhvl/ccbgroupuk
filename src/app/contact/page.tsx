@@ -38,6 +38,7 @@ export default function ContactPage() {
                     <h3>Call Us</h3>
                     <p><a href="tel:01727614464">01727 614464</a> (Office)</p>
                     <p><a href="tel:07956552477">07956 552 477</a> (Emergency)</p>
+                    <p><a href="tel:07427298805">07427 298 805</a> (Electrical)</p>
                   </div>
                 </div>
                 
@@ -53,7 +54,7 @@ export default function ContactPage() {
                   <MapPin className={styles.icon} />
                   <div>
                     <h3>Visit Us</h3>
-                    <p>Unit 5, Executive Park, Hatfield Rd, St Albans AL1 4TA</p>
+                    <p>401 St Albans Road West, St Albans, AL10 9RU</p>
                   </div>
                 </div>
                 

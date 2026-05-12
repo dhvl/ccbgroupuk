@@ -52,17 +52,31 @@
 
 .ctaBox {
   margin-top: 80px;
-  background: linear-gradient(135deg, rgba(10, 40, 95, 0.95) 0%, rgba(20, 60, 120, 0.9) 100%);
+  position: relative;
+  background: url('/images/hero-roofing.png') center/cover no-repeat;
   color: var(--white);
   padding: 80px 60px;
   border-radius: 24px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
   text-align: center;
 }
 
+.ctaBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 42, 110, 0.75);
+  backdrop-filter: blur(12px);
+  z-index: 1;
+}
+
 .ctaInner {
+  position: relative;
+  z-index: 2;
   max-width: 600px;
   margin: 0 auto;
 }

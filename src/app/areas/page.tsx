@@ -24,7 +24,7 @@ export default function AreasPage() {
       <Header />
       <Hero 
         title="Areas We Cover"
-        subtitle="Professional property maintenance across Hertfordshire, Buckinghamshire, and London."
+        subtitle="Professional property maintenance based in St Albans, serving Hertfordshire, Buckinghamshire, and London."
         backgroundImage="/images/hero-roofing.png"
       />
       <Breadcrumbs />

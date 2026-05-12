@@ -39,7 +39,7 @@ const Header = () => {
     <>
       <div className={`${styles.headerWrapper} ${!isVisible ? styles.hidden : ''}`}>
         <div className={styles.emergencyBanner}>
-          <span>Emergency call-outs available: 📱 <a href="tel:07956552477">07956 552 477</a></span>
+          <span>Emergency: 📱 <a href="tel:07956552477">07956 552 477</a> | Electrical: 📱 <a href="tel:07427298805">07427 298 805</a></span>
         </div>
         <header className={styles.header}>
           <div className={`${styles.container} container`}>

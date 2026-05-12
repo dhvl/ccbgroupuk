@@ -13,7 +13,7 @@ const Footer = () => {
                 <Image src="/images/logo.webp" alt="CCB Group" width={200} height={60} style={{ width: 'auto', height: '60px' }} />
               </Link>
             </div>
-            <p>Specialist Property Maintenance & Facilities Management across London and the Home Counties.</p>
+            <p>Specialist Property Maintenance based in St Albans, serving London and the Home Counties.</p>
             <div className={styles.accreditationBox}>
               <Image src="/images/logo-trustmark.webp" alt="TrustMark" width={80} height={35} style={{ objectFit: 'contain' }} />
               <Image src="/images/logo-chas.webp" alt="CHAS" width={80} height={35} style={{ objectFit: 'contain' }} />
@@ -25,8 +25,8 @@ const Footer = () => {
             <h3>Services</h3>
             <ul>
               <li><Link href="/gutter-cleaning">Gutter Cleaning</Link></li>
-              <li><Link href="/services/electrical">Electrical Testing</Link></li>
-              <li><Link href="/services/roofing">Roofing Works</Link></li>
+              <li><Link href="/services/electrical-testing">Electrical Testing</Link></li>
+              <li><Link href="/services/general-maintenance">General Maintenance</Link></li>
               <li><Link href="/services">All Services</Link></li>
             </ul>
           </div>
@@ -48,12 +48,12 @@ const Footer = () => {
             <p>📞 <a href="tel:01727614464">01727 614464</a></p>
             <p>📱 <a href="tel:07956552477">07956 552 477</a></p>
             <p>📧 <a href="mailto:info@ccbgroupuk.com">info@ccbgroupuk.com</a></p>
-            <p>Unit 5, Executive Park, Hatfield Rd, St Albans AL1 4TA</p>
+            <p>401 St Albans Road West, St Albans, AL10 9RU</p>
           </div>
         </div>
         
         <div className={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} CCB Group (UK) Limited | VAT Reg: 284 6962 52</p>
+          <p>&copy; {new Date().getFullYear()} CCB Group (UK) Limited | VAT Reg: 489 3461 43</p>
           <div className={styles.legal}>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms & Conditions</Link>

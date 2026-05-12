@@ -28,17 +28,35 @@ export default function AboutPage() {
           <div className={styles.contentGrid}>
             <div className={styles.text}>
               <h2>London's Trusted Maintenance Partner</h2>
-              <p>CCB Group (UK) Limited is a specialist property maintenance and facilities management company serving residential and commercial clients across London and the Home Counties.</p>
+              <p>CCB Group (UK) Limited is a specialist, family-run property maintenance and facilities management company serving residential and commercial clients across London and the Home Counties.</p>
               <p>Founded on the principles of reliability, quality, and transparency, we provide a comprehensive range of building services — from reactive emergency repairs to large-scale planned refurbishments.</p>
-              <p>Our team of multi-skilled tradespeople are fully accredited, insured, and committed to delivering excellence on every project. Whether you are a homeowner, a property manager, or a commercial estate owner, CCB Group is your trusted partner for all maintenance needs.</p>
+              <p>As a family business, we take personal pride in every project, building long-term relationships through trust and exceptional craftsmanship. Our team of multi-skilled tradespeople are fully accredited, insured, and committed to delivering excellence on every job.</p>
             </div>
             <div className={styles.imagePlaceholder}>
-              {/* Branding Image would go here */}
+              {/* Branding Image with Blur Effect */}
               <div className={styles.brandingBox}>
+                <div className={styles.familyPill}>FAMILY RUN BUSINESS</div>
                 <Award size={48} />
                 <h3>15+ Years Experience</h3>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.calloutSection}>
+        <div className="container">
+          <div className={styles.familyCallout}>
+            <div>
+              <h3>A Family Business Built on Reputation</h3>
+              <p>
+                CCB Group was founded and is still run by the same family today. Every job carries our name — which means every job matters to us personally. When you call us, you speak to a decision-maker with a reputation to protect.
+              </p>
+            </div>
+            <blockquote className={styles.pullQuote}>
+              "We started this business to do things properly. That hasn't changed."
+              <cite style={{ display: 'block', fontStyle: 'normal', fontWeight: '700', marginTop: '15px', fontSize: '0.9rem', color: 'var(--accent-cyan)', textTransform: 'uppercase', letterSpacing: '1px' }}>— The CCB Team</cite>
+            </blockquote>
           </div>
         </div>
       </section>

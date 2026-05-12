@@ -27,10 +27,10 @@ export default function Home() {
       link: '/services/electrical'
     },
     {
-      title: 'Roofing Repairs',
-      desc: 'Expert roofing services from minor leak repairs to full roof replacements and surveys.',
+      title: 'General Maintenance',
+      desc: 'Comprehensive property maintenance solutions from minor repairs to large-scale refurbishments and reactive works.',
       icon: <HomeIcon size={40} />,
-      link: '/services/roofing'
+      link: '/services/general-maintenance'
     }
   ];
 
@@ -40,7 +40,7 @@ export default function Home() {
       
       <Hero 
         title="London's Premier Property Maintenance Specialists"
-        subtitle="Professional gutter cleaning, electrical, and roofing services for domestic and commercial clients since 2010."
+        subtitle="Complete property maintenance, electrical and gutter cleaning services for domestic and commercial clients."
         backgroundImage="/images/hero-roofing.png"
       />
 
@@ -90,7 +90,7 @@ export default function Home() {
                   <Phone className={styles.check} />
                   <div>
                     <strong>24/7 Emergency Support</strong>
-                    <p>Reliable emergency electrical and roofing support when you need it most.</p>
+                    <p>Reliable emergency electrical and general maintenance support when you need it most.</p>
                   </div>
                 </li>
               </ul>
@@ -159,7 +159,7 @@ export default function Home() {
             </div>
             <div className={styles.areaCard}>
               <h3>South London</h3>
-              <p>⚡ Limited Coverage</p>
+              <p>✔ Full Coverage</p>
             </div>
           </div>
           <div className={styles.mapLinkBox}>

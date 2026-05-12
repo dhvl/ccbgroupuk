@@ -12,28 +12,73 @@
 
 .imagePlaceholder {
   height: 400px;
-  background: var(--neutral-grey);
+  position: relative;
+  background: url('/images/ccb-van.png') center/cover no-repeat;
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(30, 42, 110, 0.1), rgba(30, 42, 110, 0.1)), url('/images/ccb-van-team.png');
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 42, 110, 0.4);
+  backdrop-filter: blur(12px);
+  z-index: 1;
 }
 
 .brandingBox {
+  position: relative;
+  z-index: 2;
   background: var(--primary-navy);
   color: var(--white);
-  padding: 40px;
+  padding: 40px 30px;
   border-radius: var(--border-radius);
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .brandingBox h3 {
   color: var(--white);
-  margin-top: 15px;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.familyPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  margin-bottom: 10px;
+}
+
+.familyPill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #22c55e; /* Green for 'active/alive' business feel */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
 }
 
 .values {
@@ -97,5 +142,59 @@
   .contentGrid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+}
+
+.calloutSection {
+  background: var(--white);
+  padding: 0 0 80px;
+}
+
+.familyCallout {
+  background: var(--primary-navy);
+  color: var(--white);
+  padding: 60px;
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(30, 42, 110, 0.15);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.familyCallout h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.familyCallout p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.pullQuote {
+  border-left: 4px solid var(--accent-red);
+  padding: 10px 0 10px 30px;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 992px) {
+  .familyCallout {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 30px;
+  }
+  
+  .familyCallout h3 {
+    font-size: 1.8rem;
   }
 }

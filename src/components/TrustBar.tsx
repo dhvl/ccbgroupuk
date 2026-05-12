@@ -16,7 +16,7 @@ const TrustBar = () => {
             <Image src="/images/logo-niceic.png" alt="NICEIC Approved" width={150} height={60} style={{ width: 'auto', height: '60px' }} />
           </div>
           <div className={styles.infoItem}>
-            <p><strong>VAT Reg:</strong> 284 6962 52</p>
+            <p><strong>VAT Reg:</strong> 489 3461 43</p>
           </div>
           <div className={styles.infoItem}>
             <p><strong>5★</strong> Google Rating</p>

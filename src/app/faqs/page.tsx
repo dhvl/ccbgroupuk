@@ -8,7 +8,7 @@ export default function FAQsPage() {
   const faqs = [
     {
       q: "What areas do you cover?",
-      a: "We cover North London, East London, South London (limited), Hertfordshire, Bedfordshire, and Essex. Our coverage continues to expand — please contact us for specific availability in your area."
+      a: "We cover North London, East London, South London, Hertfordshire, Bedfordshire, and Essex. Our coverage continues to expand — please contact us for specific availability in your area."
     },
     {
       q: "Are you accredited?",
@@ -32,7 +32,7 @@ export default function FAQsPage() {
     },
     {
       q: "Are you VAT registered?",
-      a: "Yes. Our VAT Registration Number is 284 6962 52."
+      a: "Yes. Our VAT Registration Number is 489 3461 43."
     },
     {
       q: "How much do your services cost?",
