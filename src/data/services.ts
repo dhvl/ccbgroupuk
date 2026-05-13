@@ -5,32 +5,35 @@ export interface Service {
   fullDesc: string;
   features: string[];
   image: string;
+  href?: string;
 }
 
 export const services: Service[] = [
   {
     slug: 'general-maintenance',
-    title: 'General Maintenance',
+    title: 'Property Maintenance',
     shortDesc: 'Reactive and planned maintenance for residential and commercial properties.',
     fullDesc: 'We provide comprehensive property maintenance solutions, covering everything from minor repairs to large-scale planned maintenance projects.',
     features: ['Reactive Repairs', 'Planned Maintenance', 'Property Inspections', 'Safety Audits', 'Building Repairs', 'Facilities Management'],
     image: '/images/services/general-maintenance.png'
   },
   {
-    slug: 'electrical-testing',
-    title: 'Electrical Testing',
-    shortDesc: 'NICEIC approved periodic inspection and testing (EICR certificates).',
-    fullDesc: 'Ensure your property is safe and compliant with our expert electrical testing services. We provide full EICR certification for landlords and homeowners.',
-    features: ['EICR Certification', 'Fixed Wire Testing', 'PAT Testing', 'Safety Inspections', 'Emergency Lighting Tests', 'Remedial Works'],
-    image: '/images/services/electrical-testing.png'
+    slug: 'electrical',
+    title: 'Electrical Services',
+    shortDesc: 'NICEIC approved electrical installations, testing, and 24/7 emergency repairs.',
+    fullDesc: 'Our qualified electricians handle all aspects of electrical maintenance and installation, ensuring your systems are reliable and safe.',
+    features: ['Fault Finding', 'Rewiring Works', 'Lighting Upgrades', 'Fuse Board Changes', 'EICR Certification', 'Emergency Repairs'],
+    image: '/images/services/electrical-maintenance.png',
+    href: '/services/electrical'
   },
   {
-    slug: 'electrical-maintenance',
-    title: 'Electrical Maintenance',
-    shortDesc: 'Full electrical maintenance, fault finding, and installation works.',
-    fullDesc: 'Our NICEIC approved electricians handle all aspects of electrical maintenance and installation, ensuring your systems are reliable and safe.',
-    features: ['Fault Finding', 'Rewiring Works', 'Lighting Upgrades', 'Fuse Board Changes', 'Socket Installations', 'Emergency Repairs'],
-    image: '/images/services/electrical-maintenance.png'
+    slug: 'gutter-cleaning',
+    title: 'Gutter Cleaning',
+    shortDesc: 'Professional gutter clearing and repairs using high-reach vacuum technology.',
+    fullDesc: 'We clean all types and all heights of gutters using our Gutter Vacs Hoover System — with before and after camera footage on every clean.',
+    features: ['Gutter Vacuuming', 'Camera Inspection', 'Minor Repairs', 'Downpipe Unblocking', 'Fascia Cleaning', 'High-Reach Access'],
+    image: '/images/services/roofing.png',
+    href: '/gutter-cleaning'
   },
   {
     slug: 'carpentry',

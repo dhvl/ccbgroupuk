@@ -15,10 +15,10 @@ export default function Home() {
   
   const services = [
     {
-      title: 'Gutter Cleaning',
-      desc: 'Professional gutter clearing and repairs for residential and commercial properties using high-reach vacuum technology.',
-      icon: <Droplets size={40} />,
-      link: '/gutter-cleaning'
+      title: 'Property Maintenance',
+      desc: 'Comprehensive property maintenance solutions from minor repairs to large-scale refurbishments and reactive works.',
+      icon: <HomeIcon size={40} />,
+      link: '/services/general-maintenance'
     },
     {
       title: 'Electrical Services',
@@ -27,10 +27,10 @@ export default function Home() {
       link: '/services/electrical'
     },
     {
-      title: 'General Maintenance',
-      desc: 'Comprehensive property maintenance solutions from minor repairs to large-scale refurbishments and reactive works.',
-      icon: <HomeIcon size={40} />,
-      link: '/services/general-maintenance'
+      title: 'Gutter Cleaning',
+      desc: 'Professional gutter clearing and repairs for residential and commercial properties using high-reach vacuum technology.',
+      icon: <Droplets size={40} />,
+      link: '/gutter-cleaning'
     }
   ];
 
@@ -90,7 +90,7 @@ export default function Home() {
                   <Phone className={styles.check} />
                   <div>
                     <strong>24/7 Emergency Support</strong>
-                    <p>Reliable emergency electrical and general maintenance support when you need it most.</p>
+                    <p>Reliable emergency electrical and property maintenance support when you need it most.</p>
                   </div>
                 </li>
               </ul>

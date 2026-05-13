@@ -51,23 +51,23 @@ const Header = () => {
             
             <nav className={styles.nav}>
               <Link href="/">Home</Link>
+              <Link href="/services/general-maintenance">Property Maintenance</Link>
+              <Link href="/services/electrical">Electrical</Link>
+              <Link href="/gutter-cleaning">Gutter Cleaning</Link>
               <div className={styles.navItemWithDropdown}>
-                <Link href="/services">Services <span className={styles.arrow}>▾</span></Link>
+                <Link href="/services">Other Services <span className={styles.arrow}>▾</span></Link>
                 <div className={styles.dropdown}>
                   <div className={styles.dropdownGrid}>
-                    {services.map((service) => (
-                      <Link key={service.slug} href={`/services/${service.slug}`} className={styles.dropdownItem}>
+                    {services.slice(3).map((service) => (
+                      <Link key={service.slug} href={service.href || `/services/${service.slug}`} className={styles.dropdownItem}>
                         {service.title}
                       </Link>
                     ))}
                   </div>
                 </div>
               </div>
-              <Link href="/gutter-cleaning">Gutter Cleaning</Link>
               <Link href="/areas">Areas We Cover</Link>
               <Link href="/about">About Us</Link>
-              <Link href="/gallery">Gallery</Link>
-              <Link href="/contact">Contact Us</Link>
             </nav>
             
             <div className={styles.cta}>
@@ -88,22 +88,26 @@ const Header = () => {
           <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
             <div className={styles.mobileNav}>
               <Link href="/" onClick={toggleMenu}>Home</Link>
+              <Link href="/services/general-maintenance" onClick={toggleMenu}>Property Maintenance</Link>
+              <Link href="/services/electrical" onClick={toggleMenu}>Electrical</Link>
+              <Link href="/gutter-cleaning" onClick={toggleMenu}>Gutter Cleaning</Link>
+              
               <div className={styles.mobileDropdown}>
                 <button 
                   className={styles.mobileDropdownToggle}
                   onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
                 >
-                  Services <ChevronDown size={20} className={activeDropdown === 'services' ? styles.rotate : ''} />
+                  Other Services <ChevronDown size={20} className={activeDropdown === 'services' ? styles.rotate : ''} />
                 </button>
                 <div className={`${styles.mobileDropdownContent} ${activeDropdown === 'services' ? styles.show : ''}`}>
-                  {services.map((service) => (
-                    <Link key={service.slug} href={`/services/${service.slug}`} onClick={toggleMenu}>
+                  {services.slice(3).map((service) => (
+                    <Link key={service.slug} href={service.href || `/services/${service.slug}`} onClick={toggleMenu}>
                       {service.title}
                     </Link>
                   ))}
                 </div>
               </div>
-              <Link href="/gutter-cleaning" onClick={toggleMenu}>Gutter Cleaning</Link>
+              
               <Link href="/areas" onClick={toggleMenu}>Areas We Cover</Link>
               <Link href="/about" onClick={toggleMenu}>About Us</Link>
               <Link href="/gallery" onClick={toggleMenu}>Gallery</Link>

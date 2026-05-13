@@ -77,6 +77,7 @@ const InquiryForm = ({ onSuccess, compact }: InquiryFormProps) => {
         <div className={styles.selectWrapper}>
           <select name="service" required>
             <option value="">Select a service...</option>
+            <option value="general">Property Maintenance</option>
             <option value="electrical">Electrical</option>
             <option value="gutters">Gutter Cleaning/Repairs</option>
             <option value="plumbing">Plumbing</option>
@@ -86,7 +87,6 @@ const InquiryForm = ({ onSuccess, compact }: InquiryFormProps) => {
             <option value="painting">Painting & Decorating</option>
             <option value="fencing">Fencing & Landscaping</option>
             <option value="damp">Damp Proofing</option>
-            <option value="general">General Maintenance</option>
             <option value="other">Other</option>
           </select>
         </div>

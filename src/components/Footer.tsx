@@ -24,9 +24,9 @@ const Footer = () => {
           <div className={styles.links}>
             <h3>Services</h3>
             <ul>
+              <li><Link href="/services/general-maintenance">Property Maintenance</Link></li>
+              <li><Link href="/services/electrical">Electrical Services</Link></li>
               <li><Link href="/gutter-cleaning">Gutter Cleaning</Link></li>
-              <li><Link href="/services/electrical-testing">Electrical Testing</Link></li>
-              <li><Link href="/services/general-maintenance">General Maintenance</Link></li>
               <li><Link href="/services">All Services</Link></li>
             </ul>
           </div>

@@ -32,22 +32,35 @@ export default function ServicesPage() {
       <section className="section-padding">
         <div className="container">
           <div className={styles.grid}>
-            {services.map((service, index) => (
+            {/* 1. Property Maintenance & 2. Electrical */}
+            {services.slice(0, 3).map((service, index) => (
               <ServiceCard 
                 key={index} 
                 title={service.title}
                 description={service.shortDesc}
-                icon={Wrench} // Default icon or mapped icon
+                icon={Wrench}
                 href={`/services/${service.slug}`}
               />
             ))}
-            {/* Manual add for Gutter Cleaning as it has its own root page */}
+
+            {/* 3. Gutter Cleaning */}
             <ServiceCard 
               title="Gutter Repairs & Clearances"
               description="Gutter vac cleaning, camera inspection, and gutter repairs at all heights."
               icon={Droplets}
               href="/gutter-cleaning"
             />
+
+            {/* The rest of the services */}
+            {services.slice(3).map((service, index) => (
+              <ServiceCard 
+                key={index + 3} 
+                title={service.title}
+                description={service.shortDesc}
+                icon={Wrench}
+                href={`/services/${service.slug}`}
+              />
+            ))}
           </div>
         </div>
       </section>
