@@ -9,18 +9,19 @@ export async function POST(request: Request) {
     const { name, email, phone, postcode, service, message } = await request.json();
 
     const data = await resend.emails.send({
-      from: 'CCB Group <inquiry@ccbgroupuk.com>',
-      to: ['inquiry@ccbgroupuk.com'],
-      subject: `New Quote Request: ${service}`,
+      from: 'CCB Group <info@ccbgroupuk.com>',
+      to: ['info@ccbgroupuk.com'],
+      reply_to: email || undefined,
+      subject: `New Quote Request: ${service || 'General Enquiry'}`,
       html: `
         <h2>New Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Postcode:</strong> ${postcode}</p>
-        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Name:</strong> ${name || 'N/A'}</p>
+        <p><strong>Email:</strong> ${email || 'N/A'}</p>
+        <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+        <p><strong>Postcode:</strong> ${postcode || 'N/A'}</p>
+        <p><strong>Service:</strong> ${service || 'N/A'}</p>
         <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p>${message || 'N/A'}</p>
       `,
     });
 
