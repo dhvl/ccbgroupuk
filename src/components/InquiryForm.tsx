@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './InquiryForm.module.css';
 
 interface InquiryFormProps {
@@ -11,11 +11,6 @@ interface InquiryFormProps {
 const InquiryForm = ({ onSuccess, compact }: InquiryFormProps) => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
-  const [loadTime, setLoadTime] = useState<number>(0);
-
-  useEffect(() => {
-    setLoadTime(Date.now());
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,20 +20,11 @@ const InquiryForm = ({ onSuccess, compact }: InquiryFormProps) => {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
-    // Basic client-side honeypot check
-    if (data.honeypot || data.website_url) {
-      setStatus('success');
-      return;
-    }
-
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...data,
-          _ts: loadTime || Date.now(),
-        }),
+        body: JSON.stringify(data),
       });
 
       const result = await response.json().catch(() => ({}));
@@ -111,10 +97,9 @@ const InquiryForm = ({ onSuccess, compact }: InquiryFormProps) => {
         <textarea name="message" placeholder="Please describe your requirements..." rows={compact ? 3 : 5} required></textarea>
       </div>
 
-      {/* Hidden Honeypot Fields (Bots will fill these, humans won't) */}
-      <div style={{ display: 'none', position: 'absolute', left: '-9999px' }} aria-hidden="true">
-        <input type="text" name="honeypot" tabIndex={-1} autoComplete="off" />
-        <input type="text" name="website_url" tabIndex={-1} autoComplete="off" />
+      {/* Hidden Honeypot Field (Bots fill this, humans and browser autofills do not) */}
+      <div style={{ position: 'absolute', left: '-9999px', top: '-9999px', opacity: 0, height: 0, width: 0, overflow: 'hidden' }} aria-hidden="true">
+        <input type="text" name="b_hp_code" tabIndex={-1} autoComplete="off" defaultValue="" />
       </div>
 
       <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={status === 'loading'}>
